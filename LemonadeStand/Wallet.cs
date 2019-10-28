@@ -8,5 +8,14 @@ namespace LemonadeStand
 {
     class Wallet
     {
+        //member variables
+        public double Money;
+
+
+        //constructor
+
+
+
+        //member methods
     }
 }

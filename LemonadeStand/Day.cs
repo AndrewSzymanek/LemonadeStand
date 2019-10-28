@@ -8,5 +8,19 @@ namespace LemonadeStand
 {
     class Day
     {
+
+        //member variables
+        public Weather weather;
+        public List<Customer> customers;
+
+        //constructor
+
+
+
+        //member methods
+        public void DisplayWeather()
+        {
+
+        }
     }
 }

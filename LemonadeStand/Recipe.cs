@@ -8,5 +8,22 @@ namespace LemonadeStand
 {
     class Recipe
     {
+
+        //member variables
+        public int amountOfLemons;
+        public int amountOfSugarCubes;
+        public int amountOfIceCubes;
+        public double pricePerCup;
+
+
+        //constructor
+
+
+
+        //member methods
+        public void MakeRecipe()
+        {
+
+        }
     }
 }
