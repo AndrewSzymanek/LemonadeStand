@@ -33,19 +33,19 @@ namespace LemonadeStand
 
         //member methods
 
-        public void BuyLemons()
+        public void SellLemons()
         {
-            //wallet - (how many lemons * pricePerLemon)
+            //wallet minus (how many lemons * pricePerLemon)
         }
-        public void BuySugarCubes()
-        {
-
-        }
-        public void BuyIceCubes()
+        public void SellSugarCubes()
         {
 
         }
-        public void BuyCups()
+        public void SellIceCubes()
+        {
+
+        }
+        public void SellCups()
         {
 
         }

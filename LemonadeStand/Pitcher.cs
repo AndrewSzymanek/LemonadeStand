@@ -9,13 +9,21 @@ namespace LemonadeStand
     class Pitcher
     {
         //member variables
+        
         public int cupsLeftInPitcher;
 
 
         //constructor
-
+        public Pitcher()
+        {
+            cupsLeftInPitcher = 24;
+        }
 
 
         //member methods
+        public void PourCup()
+        {
+           
+        }
     }
 }

@@ -28,19 +28,23 @@ namespace LemonadeStand
         public void RunGame()
         {
             ChooseAmountOfDays();
-            for (currentDay = 1; currentDay <=numberOfDays; currentDay++)
-            {if (money > 0)
-                {
+            for (currentDay = 1; currentDay <=numberOfDays; currentDay++) { 
+            //if (money > 0) 
+            //    {
 
-                }
 
+
+            //    }
             }
-            
+        }
 
+        public void UserMenu()
+        {
+            //
         }
         public int ChooseAmountOfDays()
         {
-            Console.WriteLine("Would you like to play 7 days or 14 days of Lemonade Stand? Enter '7' or '14'.");
+            Console.WriteLine("How many days would you like to play Lemonade Stand? Enter up to 14 days.");
             numberOfDays = Int32.Parse(Console.ReadLine());
             return numberOfDays;
 
