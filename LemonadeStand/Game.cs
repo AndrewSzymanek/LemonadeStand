@@ -32,15 +32,10 @@ namespace LemonadeStand
             //if (money > 0) 
             //    {
 
-
+            //run the functions in here if it meets the above criteria
 
             //    }
             }
-        }
-
-        public void UserMenu()
-        {
-            //
         }
         public int ChooseAmountOfDays()
         {
@@ -53,6 +48,11 @@ namespace LemonadeStand
         {
 
         }
+        public void UserMenu()
+        {
+            //Display current inventory here? Then ask if they'd like to visit the store to buy things?
+        }
+        
 
 
 

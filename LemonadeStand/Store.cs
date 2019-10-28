@@ -16,10 +16,7 @@ namespace LemonadeStand
         public double pricePerIceCube;
         public double pricePerCup;
 
-        public int lemon;
-        public int sugarCube;
-        public int iceCube;
-        public int cup;
+       
 
         //constructor
 
@@ -35,6 +32,9 @@ namespace LemonadeStand
 
         public void SellLemons()
         {
+            //ask how many the person would like to buy
+            //calculate total
+            //figure out if person has enough money in wallet
             //wallet minus (how many lemons * pricePerLemon)
         }
         public void SellSugarCubes()
