@@ -14,11 +14,14 @@ namespace LemonadeStand
         public Wallet wallet;
         public Recipe recipe;
         public Pitcher pitcher;
-        
+
 
         //constructor
 
-
+        public Player()
+        {
+         
+        }
 
         //member methods
 
@@ -28,6 +31,7 @@ namespace LemonadeStand
         }
         public void DisplayInventory()
         {
+            
 
         }
         public void DisplayWallet()

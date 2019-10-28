@@ -20,7 +20,7 @@ namespace LemonadeStand
         //member methods
         public void DisplayWeather()
         {
-           Console.WriteLine(weather.GenerateWeatherCondition());
+            Console.WriteLine(weather.GenerateWeatherCondition());
             Console.WriteLine(weather.GenerateTemp());
         }
     }

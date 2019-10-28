@@ -18,8 +18,15 @@ namespace LemonadeStand
 
         //constructor
 
-
+        public Store()
+        {
+            pricePerLemon = .25;
+            pricePerSugarCube = .10;
+            pricePerIceCube = .05;
+            pricePerCup = .50;
+        }
 
         //member methods
+
     }
 }

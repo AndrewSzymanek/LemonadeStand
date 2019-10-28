@@ -11,8 +11,7 @@ namespace LemonadeStand
         static void Main(string[] args)
         {
 
-            Weather weather = new Weather();
-            Weather test = weather.DisplayWeather();
+            
 
 
             //Game game = new Game();
