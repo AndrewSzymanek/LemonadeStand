@@ -27,6 +27,7 @@ namespace LemonadeStand
         {
             ChooseAmountOfDays();
 
+
         }
         public string ChooseAmountOfDays()
         {
