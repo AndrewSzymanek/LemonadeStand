@@ -20,13 +20,19 @@ namespace LemonadeStand
 
         public Player()
         {
-         
+            
         }
 
         //member methods
 
         public void ChooseName()
         {
+            Console.WriteLine("Please enter your name.");
+            name = Console.ReadLine();
+        }
+        public void MakePitcher()
+        {
+
 
         }
         public void DisplayInventory()
@@ -34,8 +40,9 @@ namespace LemonadeStand
             
 
         }
-        public void DisplayWallet()
+        public void CheckWallet()
         {
+
 
         }
 

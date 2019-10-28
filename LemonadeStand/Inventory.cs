@@ -17,10 +17,20 @@ namespace LemonadeStand
 
 
         //constructor
-
+        public Inventory()
+        {
+            numberOfLemons = 0;
+            numberOfSugarCubes = 0;
+            numberOfIceCubes = 0;
+            numberOfCups = 0;
+        }
 
 
         //member methods
+
+
+        //each time a pitcher is made, subtract each of these numbers by the numbers in the recipe
+        //likewise, each time a visit to the store is made, add to each of these numbers
 
     }
 }

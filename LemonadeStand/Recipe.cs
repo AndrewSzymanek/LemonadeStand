@@ -17,13 +17,21 @@ namespace LemonadeStand
 
 
         //constructor
-
+        public Recipe()
+        {
+            
+        }
 
 
         //member methods
         public void MakeRecipe()
         {
-
+            Console.WriteLine("Choose the amount of lemons you'd like to use in your recipe.");
+            amountOfLemons = Int32.Parse(Console.ReadLine());
+            Console.WriteLine("Choose the amount of sugar cubes you'd like to use in your recipe.");
+            amountOfSugarCubes = Int32.Parse(Console.ReadLine());
+            Console.WriteLine("Choose the amount of ice cubes you'd like to use in your recipe.");
+            amountOfIceCubes = Int32.Parse(Console.ReadLine());
         }
     }
 }

@@ -16,6 +16,11 @@ namespace LemonadeStand
         public double pricePerIceCube;
         public double pricePerCup;
 
+        public int lemon;
+        public int sugarCube;
+        public int iceCube;
+        public int cup;
+
         //constructor
 
         public Store()
@@ -28,5 +33,21 @@ namespace LemonadeStand
 
         //member methods
 
+        public void BuyLemons()
+        {
+            //wallet - (how many lemons * pricePerLemon)
+        }
+        public void BuySugarCubes()
+        {
+
+        }
+        public void BuyIceCubes()
+        {
+
+        }
+        public void BuyCups()
+        {
+
+        }
     }
 }

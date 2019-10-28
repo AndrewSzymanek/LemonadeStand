@@ -14,14 +14,17 @@ namespace LemonadeStand
         public List<Customer> customers;
 
         //constructor
+        public Day()
+        {
 
+        }
 
 
         //member methods
         public void DisplayWeather()
         {
-            Console.WriteLine(weather.GenerateWeatherCondition());
-            Console.WriteLine(weather.GenerateTemp());
+            Console.WriteLine("Today's weather condition is" + " " + weather.GenerateWeatherCondition());
+            Console.WriteLine("Today's temperature is" + " " + weather.GenerateTemp() + "degrees Fahrenheit.");
         }
     }
 }
