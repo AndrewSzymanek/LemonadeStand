@@ -55,6 +55,9 @@ namespace LemonadeStand
         }
         public void SellLemons()
         {
+            Console.WriteLine("How many lemons would you like to buy?");
+            int numLemons = Int32.Parse(Console.ReadLine());
+            
             //ask how many the person would like to buy
             //calculate total
             //figure out if person has enough money in wallet
@@ -62,14 +65,20 @@ namespace LemonadeStand
         }
         public void SellSugarCubes()
         {
+            Console.WriteLine("How many sugar cubes would you like to buy?");
+            int numSugarCubes = Int32.Parse(Console.ReadLine());
 
         }
         public void SellIceCubes()
         {
+            Console.WriteLine("How many ice cubes would you like to buy?");
+            int numIceCubes = Int32.Parse(Console.ReadLine());
 
         }
         public void SellCups()
         {
+            Console.WriteLine("How many cups would you like to buy?");
+            int numCups = Int32.Parse(Console.ReadLine());
 
         }
     }
