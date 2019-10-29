@@ -16,16 +16,18 @@ namespace LemonadeStand
         public double pricePerIceCube;
         public double pricePerCup;
 
-       
+        public Player player;
 
         //constructor
 
-        public Store()
+        public Store(Player player)
         {
             pricePerLemon = .25;
             pricePerSugarCube = .10;
             pricePerIceCube = .05;
             pricePerCup = .50;
+
+            this.player = player;
         }
 
         //member methods
@@ -57,9 +59,8 @@ namespace LemonadeStand
         {
             Console.WriteLine("How many lemons would you like to buy?");
             int numLemons = Int32.Parse(Console.ReadLine());
-            
-            //ask how many the person would like to buy
-            //calculate total
+            double totalCost = (numLemons * pricePerLemon);
+            player.wallet.money -= totalCost;
             //figure out if person has enough money in wallet
             //wallet minus (how many lemons * pricePerLemon)
         }
@@ -67,18 +68,22 @@ namespace LemonadeStand
         {
             Console.WriteLine("How many sugar cubes would you like to buy?");
             int numSugarCubes = Int32.Parse(Console.ReadLine());
-
+            double totalCost = (numSugarCubes * pricePerSugarCube);
+            player.wallet.money -= totalCost;
         }
         public void SellIceCubes()
         {
             Console.WriteLine("How many ice cubes would you like to buy?");
             int numIceCubes = Int32.Parse(Console.ReadLine());
-
+            double totalCost = (numIceCubes * pricePerIceCube);
+            player.wallet.money = (player.wallet.money - totalCost);
         }
         public void SellCups()
         {
             Console.WriteLine("How many cups would you like to buy?");
             int numCups = Int32.Parse(Console.ReadLine());
+            double totalCost = (numCups * pricePerCup);
+            player.wallet.money = (player.wallet.money - totalCost);
 
         }
     }
