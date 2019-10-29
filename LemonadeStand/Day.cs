@@ -17,12 +17,14 @@ namespace LemonadeStand
         public Day(Random random)
         {
             weather = new Weather(random);
+            
         }
 
 
         //member methods
         public void RunDay(Player player, Store store) 
         {
+            player.recipe.MakeRecipe();
             DisplayWeather();
             UserMenu(player, store);
 

@@ -16,12 +16,14 @@ namespace LemonadeStand
         //constructor
         public Pitcher()
         {
-            cupsLeftInPitcher = 24;
+            cupsLeftInPitcher = 20;
         }
 
 
         //member methods
-        public void PourCup()
+
+        
+        public void CupPoured()
         {
            
         }

@@ -15,7 +15,6 @@ namespace LemonadeStand
         public double pricePerSugarCube;
         public double pricePerIceCube;
         public double pricePerCup;
-
         public Player player;
 
         //constructor
@@ -26,7 +25,6 @@ namespace LemonadeStand
             pricePerSugarCube = .05;
             pricePerIceCube = .05;
             pricePerCup = .10;
-
             this.player = player;
         }
 
@@ -99,7 +97,7 @@ namespace LemonadeStand
             {
                 player.wallet.money -= totalCost;
             }
-            player.inventory.numberOfIceCubes += numCups;
+            player.inventory.numberOfCups += numCups;
         }
     }
 }

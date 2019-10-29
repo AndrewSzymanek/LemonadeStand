@@ -36,7 +36,9 @@ namespace LemonadeStand
         }
         public void MakePitcher()
         {
-
+            inventory.numberOfLemons -= recipe.amountOfLemons;
+            inventory.numberOfSugarCubes -= recipe.amountOfSugarCubes;
+            inventory.numberOfIceCubes -= recipe.amountOfIceCubes;
 
         }
       
