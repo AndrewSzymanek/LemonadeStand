@@ -29,10 +29,10 @@ namespace LemonadeStand
         //member methods
         public void DisplayInventory()
         {
-            Console.WriteLine("You have " + numberOfLemons + "lemons.");
-            Console.WriteLine("You have " + numberOfSugarCubes + "sugar cubes.");
-            Console.WriteLine("You have " + numberOfIceCubes + "ice cubes.");
-            Console.WriteLine("You have " + numberOfCups + "cups.");
+            Console.WriteLine("You have " + numberOfLemons + " lemons.");
+            Console.WriteLine("You have " + numberOfSugarCubes + " sugar cubes.");
+            Console.WriteLine("You have " + numberOfIceCubes + " ice cubes.");
+            Console.WriteLine("You have " + numberOfCups + " cups.");
 
         }
 

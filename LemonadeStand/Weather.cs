@@ -24,22 +24,24 @@ namespace LemonadeStand
             temperatures = new List<int>() {65, 70, 78, 85, 97};
             random = new Random();
             random = new Random();
+            GenerateWeatherCondition();
+            GenerateTemp();
         }
 
 
         //member methods
-        public string GenerateWeatherCondition()
+        public void GenerateWeatherCondition()
         {
             int randomWeather = random.Next(0, weatherConditions.Count);
             condition = weatherConditions[randomWeather];
-            return condition;
+         
 
         }
-        public int GenerateTemp()
+        public void GenerateTemp()
         {
             int randomTemp = random.Next(0, temperatures.Count);
             temperature = temperatures[randomTemp];
-            return temperature;
+          
         }
     }
 }

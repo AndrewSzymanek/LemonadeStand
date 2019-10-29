@@ -21,7 +21,11 @@ namespace LemonadeStand
 
         public Game()
         {
+            days = new List<Day>();
             currentDay = 1;
+            player = new Player();
+            store = new Store(player);
+
             
         }
 
@@ -55,7 +59,6 @@ namespace LemonadeStand
             Console.WriteLine("How many days would you like to play Lemonade Stand? Enter up to 14 days.");
             numberOfDays = Int32.Parse(Console.ReadLine());
             return numberOfDays;
-
         }
         public void DisplayDay()
         {

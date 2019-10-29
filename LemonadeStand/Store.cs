@@ -22,10 +22,10 @@ namespace LemonadeStand
 
         public Store(Player player)
         {
-            pricePerLemon = .25;
-            pricePerSugarCube = .10;
+            pricePerLemon = .10;
+            pricePerSugarCube = .05;
             pricePerIceCube = .05;
-            pricePerCup = .50;
+            pricePerCup = .10;
 
             this.player = player;
         }
@@ -60,7 +60,11 @@ namespace LemonadeStand
             Console.WriteLine("How many lemons would you like to buy?");
             int numLemons = Int32.Parse(Console.ReadLine());
             double totalCost = (numLemons * pricePerLemon);
-            player.wallet.money -= totalCost;
+            if(player.wallet.money >= totalCost)
+            {
+                player.wallet.money -= totalCost;
+            }
+            player.inventory.numberOfLemons += numLemons;
             //figure out if person has enough money in wallet
             //wallet minus (how many lemons * pricePerLemon)
         }
@@ -69,22 +73,33 @@ namespace LemonadeStand
             Console.WriteLine("How many sugar cubes would you like to buy?");
             int numSugarCubes = Int32.Parse(Console.ReadLine());
             double totalCost = (numSugarCubes * pricePerSugarCube);
-            player.wallet.money -= totalCost;
+            if(player.wallet.money >= totalCost)
+            {
+                player.wallet.money -= totalCost;
+            }
+            player.inventory.numberOfSugarCubes += numSugarCubes;
         }
         public void SellIceCubes()
         {
             Console.WriteLine("How many ice cubes would you like to buy?");
             int numIceCubes = Int32.Parse(Console.ReadLine());
             double totalCost = (numIceCubes * pricePerIceCube);
-            player.wallet.money = (player.wallet.money - totalCost);
+            if(player.wallet.money >= totalCost)
+            {
+                player.wallet.money -= totalCost;
+            }
+            player.inventory.numberOfIceCubes += numIceCubes;
         }
         public void SellCups()
         {
             Console.WriteLine("How many cups would you like to buy?");
             int numCups = Int32.Parse(Console.ReadLine());
             double totalCost = (numCups * pricePerCup);
-            player.wallet.money = (player.wallet.money - totalCost);
-
+            if (player.wallet.money >= totalCost)
+            {
+                player.wallet.money -= totalCost;
+            }
+            player.inventory.numberOfIceCubes += numCups;
         }
     }
 }

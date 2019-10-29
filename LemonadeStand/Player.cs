@@ -20,7 +20,11 @@ namespace LemonadeStand
 
         public Player()
         {
-            
+            ChooseName();
+            wallet = new Wallet();
+            inventory = new Inventory();
+            recipe = new Recipe();
+            pitcher = new Pitcher();
         }
 
         //member methods
