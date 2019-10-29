@@ -10,7 +10,7 @@ namespace LemonadeStand
     {
 
         //member variables
-
+        public Random random;
         public Player player;
         public List<Day> days;
         public int currentDay;
@@ -21,6 +21,7 @@ namespace LemonadeStand
 
         public Game()
         {
+            random = new Random();
             days = new List<Day>();
             currentDay = 1;
             player = new Player();
@@ -35,7 +36,7 @@ namespace LemonadeStand
 
             for (int i = 0; i < numbDays; i++)
             {
-                days.Add(new Day());
+                days.Add(new Day(random));
             }
         }
         public void RunGame()

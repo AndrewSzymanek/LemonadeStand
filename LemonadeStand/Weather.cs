@@ -12,32 +12,32 @@ namespace LemonadeStand
         //member variables
         public string condition;
         public int temperature;
-        public Random random;
+       
         public List<string> weatherConditions;
         public List<int> temperatures;
 
         //constructor
 
-        public Weather()
+        public Weather(Random random)
         {
             weatherConditions = new List<string>(){"rainy", "overcast", "sunny", "thunderstorm", "partly cloudy"};
             temperatures = new List<int>() {65, 70, 78, 85, 97};
-            random = new Random();
-            random = new Random();
-            GenerateWeatherCondition();
-            GenerateTemp();
+            
+            
+            GenerateWeatherCondition(random);
+            GenerateTemp(random);
         }
 
 
         //member methods
-        public void GenerateWeatherCondition()
+        public void GenerateWeatherCondition(Random random)
         {
             int randomWeather = random.Next(0, weatherConditions.Count);
             condition = weatherConditions[randomWeather];
          
 
         }
-        public void GenerateTemp()
+        public void GenerateTemp(Random random)
         {
             int randomTemp = random.Next(0, temperatures.Count);
             temperature = temperatures[randomTemp];
