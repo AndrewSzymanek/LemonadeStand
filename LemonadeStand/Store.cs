@@ -30,6 +30,29 @@ namespace LemonadeStand
 
         //member methods
 
+
+        public void WhichItemToBuy()
+        {
+            Console.WriteLine("Enter which item you'd like to purchase. Enter 'lemons', 'sugar cubes', 'ice cubes', or 'cups'.");
+            string storeChoice = Console.ReadLine();
+
+            switch (storeChoice)
+            {
+                case "lemons":
+                    SellLemons();
+                break;
+                case "sugar cubes":
+                    SellSugarCubes();
+                break;
+                case "ice cubes":
+                    SellIceCubes();
+                break;
+                case "cups":
+                    SellCups();
+                break;
+            }
+
+        }
         public void SellLemons()
         {
             //ask how many the person would like to buy

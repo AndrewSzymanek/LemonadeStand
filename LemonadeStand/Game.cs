@@ -50,7 +50,18 @@ namespace LemonadeStand
         }
         public void UserMenu()
         {
-            //Display current inventory here? Then ask if they'd like to visit the store to buy things?
+            Console.WriteLine("Would you like to check inventory or go to the store? Type 'inventory' or 'store'.");
+            string menuChoice = Console.ReadLine();
+            switch (menuChoice)
+            {
+                case "inventory":
+                   DisplayInventory();
+                break;
+                case "store":
+                   WhichItemToBuy();
+                break;
+
+            }
         }
         
 

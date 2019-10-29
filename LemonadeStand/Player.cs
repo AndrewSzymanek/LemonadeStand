@@ -35,16 +35,7 @@ namespace LemonadeStand
 
 
         }
-        public void DisplayInventory()
-        {
-            
-
-        }
-        public void CheckWallet()
-        {
-
-
-        }
+      
 
     }
 }
