@@ -64,15 +64,13 @@ namespace LemonadeStand
         }
         private void GenerateCustomers(Random random)
         {
-            //50-150 customers randomly generated- new instances of a Customer object
-            //for loop adds a new customer object 
-            //random parameter
-
-            int randomNum = random.Next(50, 151);
-            for(int i = 1; i < randomNum; i++)
-            {
-                customers.Add(new Customer());
-            }
+           //pass day's weather condition and temp in 
+         
+                int randomNum = random.Next(50, 151);
+                for (int i = 1; i < randomNum; i++)
+                {
+                    customers.Add(new Customer());
+                }
         }
 
        

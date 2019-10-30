@@ -38,7 +38,7 @@ namespace LemonadeStand
         }
         public void GenerateTemp()
         {
-            temperature = temperatures.Next(65, 105);
+            temperature = temperatures.Next(60, 105);
             
           
         }
