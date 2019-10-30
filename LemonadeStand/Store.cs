@@ -61,8 +61,9 @@ namespace LemonadeStand
             if(player.wallet.money >= totalCost)
             {
                 player.wallet.money -= totalCost;
+                player.inventory.numberOfLemons += numLemons;
             }
-            player.inventory.numberOfLemons += numLemons;
+            
             //Does this follow single responsibility principle? Need to break up updating inventory to another method?
         }
         public void SellSugarCubes()
@@ -73,8 +74,9 @@ namespace LemonadeStand
             if(player.wallet.money >= totalCost)
             {
                 player.wallet.money -= totalCost;
+                player.inventory.numberOfSugarCubes += numSugarCubes;
             }
-            player.inventory.numberOfSugarCubes += numSugarCubes;
+            
         }
         public void SellIceCubes()
         {
@@ -84,8 +86,9 @@ namespace LemonadeStand
             if(player.wallet.money >= totalCost)
             {
                 player.wallet.money -= totalCost;
+                player.inventory.numberOfIceCubes += numIceCubes;
             }
-            player.inventory.numberOfIceCubes += numIceCubes;
+            
         }
         public void SellCups()
         {
@@ -95,8 +98,9 @@ namespace LemonadeStand
             if (player.wallet.money >= totalCost)
             {
                 player.wallet.money -= totalCost;
+                player.inventory.numberOfCups += numCups;
             }
-            player.inventory.numberOfCups += numCups;
+            
         }
     }
 }

@@ -15,11 +15,19 @@ namespace LemonadeStand
 
 
         //constructor
+        public Customer()
+        {
 
+        }
 
 
         //member methods
 
-        //
+        //buy lemonade method
+
+        public void MakePurchaseDecision(string condition, int temperature, Recipe recipe)
+        {
+
+        }
     }
 }

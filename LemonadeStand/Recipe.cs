@@ -33,5 +33,11 @@ namespace LemonadeStand
             Console.WriteLine("Choose the amount of ice cubes you'd like to use in each pitcher of lemonade.");
             amountOfIceCubes = Int32.Parse(Console.ReadLine());
         }
+        public void SetPrice()
+        {
+            Console.WriteLine("Set the price per cup of lemonade.");
+            pricePerCup = Double.Parse(Console.ReadLine());
+            //handle user error here
+        }
     }
 }

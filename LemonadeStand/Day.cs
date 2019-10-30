@@ -18,9 +18,8 @@ namespace LemonadeStand
         {
             weather = new Weather(random);
             customers = new List<Customer>();
-            
+            GenerateCustomers(random);
         }
-
 
         //member methods
         public void RunDay(Player player, Store store) 
@@ -58,9 +57,19 @@ namespace LemonadeStand
                     break;
             }
         }
-        public void generateCustomers()
+        private void GenerateCustomers(Random random)
         {
+            //50-150 customers randomly generated- new instances of a Customer object
+            //for loop adds a new customer object 
+            //random parameter
 
+            int randomNum = random.Next(50, 151);
+            for(int i = 1; i < randomNum; i++)
+            {
+                customers.Add(new Customer());
+            }
         }
+
+       
     }
 }
