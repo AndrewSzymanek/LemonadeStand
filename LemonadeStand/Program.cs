@@ -11,7 +11,8 @@ namespace LemonadeStand
         static void Main(string[] args)
         {
 
-
+            //Day day = new Day(new Random());
+           
 
 
             Game game = new Game();

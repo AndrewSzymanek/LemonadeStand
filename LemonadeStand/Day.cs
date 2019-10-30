@@ -22,10 +22,15 @@ namespace LemonadeStand
         }
 
         //member methods
-        public void RunDay(Player player, Store store) 
+        public void RunDay(Player player, Store store, Random random) 
         {
             DisplayWeather();
             UserMenu(player, store);
+            foreach(Customer customer in customers)
+            {
+                MakePurchaseDecision();
+            }
+            //foreach customer, run decision method
 
         }
         public void DisplayWeather()
@@ -67,7 +72,6 @@ namespace LemonadeStand
             for(int i = 1; i < randomNum; i++)
             {
                 customers.Add(new Customer());
-                
             }
         }
 

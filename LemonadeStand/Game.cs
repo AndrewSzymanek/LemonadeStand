@@ -50,7 +50,7 @@ namespace LemonadeStand
             {
                 for (int i = 0; i < days.Count; i++)
                 {
-                    days[i].RunDay(player, store);
+                    days[i].RunDay(player, store, random);
                 }
             }
         }
