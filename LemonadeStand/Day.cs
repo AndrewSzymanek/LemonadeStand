@@ -17,6 +17,7 @@ namespace LemonadeStand
         public Day(Random random)
         {
             weather = new Weather(random);
+            customers = new List<Customer>();
             
         }
 
@@ -24,11 +25,9 @@ namespace LemonadeStand
         //member methods
         public void RunDay(Player player, Store store) 
         {
-            
             DisplayWeather();
             UserMenu(player, store);
 
-            //call user menu
         }
         public void DisplayWeather()
         {
@@ -38,7 +37,6 @@ namespace LemonadeStand
         }
         public void UserMenu(Player player, Store store)
         {
-            
 
             Console.WriteLine("Would you like to check inventory, check wallet or go to the store? Type 'inventory', 'wallet', or 'store'. Type 'stop' to move on.");
             string menuChoice = Console.ReadLine();
@@ -59,6 +57,10 @@ namespace LemonadeStand
                 case "stop":
                     break;
             }
+        }
+        public void generateCustomers()
+        {
+
         }
     }
 }

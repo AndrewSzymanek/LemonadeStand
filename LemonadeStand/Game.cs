@@ -43,28 +43,23 @@ namespace LemonadeStand
         {
             CreateDays(ChooseAmountOfDays());
             player.recipe.MakeRecipe();
-            for (int i = 0; i < days.Count; i++)
+           
+            if (player.wallet.money > 0)
             {
-                days[i].RunDay(player, store);
+                for (int i = 0; i < days.Count; i++)
+                {
+                    days[i].RunDay(player, store);
+                }
             }
-            //if (money > 0) 
-            //    {
-
-            //run the functions in here if it meets the above criteria
-
-            //    }
-            
         }
         public int ChooseAmountOfDays()
         {
-            Console.WriteLine("How many days would you like to play Lemonade Stand? Enter up to 14 days.");
+            Console.WriteLine(player.name + " , how many days would you like to play Lemonade Stand? Enter up to 14 days.");
             numberOfDays = Int32.Parse(Console.ReadLine());
-            return numberOfDays;
+            
+                return numberOfDays;
         }
-        public void DisplayDay()
-        {
-
-        }
+      
         
         
 
