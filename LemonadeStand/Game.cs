@@ -42,7 +42,7 @@ namespace LemonadeStand
         public void RunGame()
         {
             CreateDays(ChooseAmountOfDays());
-
+            player.recipe.MakeRecipe();
             for (int i = 0; i < days.Count; i++)
             {
                 days[i].RunDay(player, store);

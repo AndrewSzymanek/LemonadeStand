@@ -24,7 +24,7 @@ namespace LemonadeStand
         //member methods
         public void RunDay(Player player, Store store) 
         {
-            player.recipe.MakeRecipe();
+            
             DisplayWeather();
             UserMenu(player, store);
 
