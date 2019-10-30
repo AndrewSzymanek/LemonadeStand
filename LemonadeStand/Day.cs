@@ -67,6 +67,7 @@ namespace LemonadeStand
             for(int i = 1; i < randomNum; i++)
             {
                 customers.Add(new Customer());
+                
             }
         }
 

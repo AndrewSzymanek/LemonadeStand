@@ -63,8 +63,7 @@ namespace LemonadeStand
                 player.wallet.money -= totalCost;
                 player.inventory.numberOfLemons += numLemons;
             }
-            
-            //Does this follow single responsibility principle? Need to break up updating inventory to another method?
+           
         }
         public void SellSugarCubes()
         {

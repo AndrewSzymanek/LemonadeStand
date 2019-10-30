@@ -25,9 +25,9 @@ namespace LemonadeStand
 
         //buy lemonade method
 
-        public void MakePurchaseDecision(string condition, int temperature, Recipe recipe)
+        public void MakePurchaseDecision(Weather weather, Recipe recipe)
         {
-
+            //have to pass in day and/or player to be able to access weather and recipe?
         }
     }
 }
