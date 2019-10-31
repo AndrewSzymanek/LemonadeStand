@@ -26,8 +26,10 @@ namespace LemonadeStand
         {
             DisplayWeather();
             UserMenu(player, store);
-            foreach(Customer customer in customers)
+            Console.WriteLine("You have " + customers.Count + " potential customers today.");
+            foreach (Customer customer in customers)
             {
+                
                 customer.MakePurchaseDecision(player, weather);
             }
             //foreach customer, run decision method
@@ -42,7 +44,7 @@ namespace LemonadeStand
         public void UserMenu(Player player, Store store)
         {
 
-            Console.WriteLine("Would you like to check inventory, check wallet or go to the store? Type 'inventory', 'wallet', or 'store'. Type 'stop' to move on.");
+            Console.WriteLine("Would you like to check inventory, check wallet or go to the store? Type 'inventory', 'wallet', or 'store'.\nType 'make pitcher' to get ready for customers then type 'continue' to move on.");
             string menuChoice = Console.ReadLine();
             switch (menuChoice)
             {
@@ -58,7 +60,14 @@ namespace LemonadeStand
                     store.WhichItemToBuy();
                     UserMenu(player, store);
                     break;
-                case "stop":
+                case "make pitcher":
+                    player.MakePitcher();
+                    break;
+                case "continue":
+                    break;
+                default:
+                    Console.WriteLine("Please type a valid response.");
+                    UserMenu(player, store);
                     break;
             }
         }
@@ -66,7 +75,7 @@ namespace LemonadeStand
         {
            //pass day's weather condition and temp in 
          
-                int randomNum = random.Next(50, 151);
+                int randomNum = random.Next(30, 51);
                 for (int i = 1; i < randomNum; i++)
                 {
                     customers.Add(new Customer(random));

@@ -44,6 +44,7 @@ namespace LemonadeStand
             CreateDays(ChooseAmountOfDays());
             player.recipe.MakeRecipe();
             player.recipe.SetPrice();
+            player.MakePitcher();
 
 
             if (player.wallet.money > 0)
