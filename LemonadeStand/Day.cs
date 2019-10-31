@@ -33,7 +33,7 @@ namespace LemonadeStand
                 {
                     customer.MakePurchaseDecision(player, weather);
                 }
-                else if(player.pitcher.cupsLeftInPitcher = 0)
+                else if(player.pitcher.cupsLeftInPitcher == 0)
                 {
                     player.MakePitcher();
                 }

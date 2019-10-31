@@ -8,6 +8,7 @@ namespace LemonadeStand
 {
     class Inventory
     {
+        //SOLID PRINCIPLE: This inventory class follows the single responsibility principle because it only has one job- to keep track of/display inventory.
 
         //member variables
         public int numberOfLemons;

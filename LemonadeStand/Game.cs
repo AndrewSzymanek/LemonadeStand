@@ -54,16 +54,33 @@ namespace LemonadeStand
         {
             Console.WriteLine(player.name + ", how many days would you like to play Lemonade Stand? Enter up to 14 days.");
 
-            
+            try
+            {
                 numberOfDays = Int32.Parse(Console.ReadLine());
-  
-            return numberOfDays;
+                if (!(numberOfDays > 0 && numberOfDays < 15))
+                {
+                    Console.WriteLine("Please enter a number between 1 and 14.");
+                    ChooseAmountOfDays();
+                }
+                else if (numberOfDays > 0 && numberOfDays < 15)
+                {
+                    Console.WriteLine("You've chosen to play for " + numberOfDays + " days.");
+                }
+                return numberOfDays;
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine("Please enter numbers, not other characters.");
+                return ChooseAmountOfDays();
+            }
+           
+
         }
       
         public void DisplayRules()
         {
-            Console.WriteLine("Welcome to Lemonade Stand where the goal is to have as many passersby purchase your lemonade.\n First, you will choose how long you'd like to play the game.\nThen, you will decide your special recipe.");
-            Console.WriteLine("After choosing your recipe and price, you will be shown the first day's weather.\nBased off of the weather, you will choose your price of lemonade.\nIf it's sunny and hot, jack that price up! If it's cool and/or rainy, lower that price.");
+            Console.WriteLine("Welcome to Lemonade Stand where the goal is to have as many passersby purchase your lemonade.\nFirst, you will choose how long you'd like to play the game.\nThen, you will decide your special recipe.");
+            Console.WriteLine("After choosing your recipe, you will be shown the first day's weather.\nBased off of the weather, you will choose your price of lemonade.\nIf it's sunny and hot, jack that price up! If it's cool and/or rainy, lower that price.");
             Console.WriteLine("When the price is set, you're able to start stocking up for your inventory of items to make pitchers of lemonade and sell them to customers.\nAfter your inventory is stocked up, you should go ahead and make a pitcher.\nYou can't make a pitcher without buying some items first.");
             Console.WriteLine("Finally, enter 'continue' to see how many passersby you have that day and watch some of them buy from you or pass you buy.");
         }
