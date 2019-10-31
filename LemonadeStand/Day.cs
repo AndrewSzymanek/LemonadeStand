@@ -28,7 +28,7 @@ namespace LemonadeStand
             UserMenu(player, store);
             foreach(Customer customer in customers)
             {
-                MakePurchaseDecision();
+                customer.MakePurchaseDecision(player, weather);
             }
             //foreach customer, run decision method
 
@@ -69,7 +69,7 @@ namespace LemonadeStand
                 int randomNum = random.Next(50, 151);
                 for (int i = 1; i < randomNum; i++)
                 {
-                    customers.Add(new Customer());
+                    customers.Add(new Customer(random));
                 }
         }
 

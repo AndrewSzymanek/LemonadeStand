@@ -26,10 +26,24 @@ namespace LemonadeStand
 
         //buy lemonade method
 
-        public void MakePurchaseDecision(Player player)
+        public void MakePurchaseDecision(Player player, Weather weather)
         {
+          
+            bool weatherAnswer = WeatherBasedPurchaseDecision(weather);
+            bool priceAnswer = PriceBasedPurchaseDecision(player.recipe);
             //if it returns true
-            player.pitcher.CupPoured();
+            if(weatherAnswer == true && priceAnswer == true)
+            {
+                player.pitcher.CupPoured();
+                PayForCup(player);
+                Console.WriteLine("Purchase!");
+                //display money, inventory, cups left, etc.?
+            }
+            else
+            {
+
+            }
+            
             //if it returns false
         }
         public bool WeatherBasedPurchaseDecision(Weather weather)
@@ -46,6 +60,7 @@ namespace LemonadeStand
                     return false;
                 }
             }
+           
             else if(weather.condition == "rainy" && weather.temperature < 70)
             {
                 GenerateRandomNumber();
@@ -155,19 +170,24 @@ namespace LemonadeStand
                 }
 
             }
+            else
+            {
+                return false;
+            }
         }
-        public void PriceBasedPurchaseDecision(Recipe recipe)
+        public bool PriceBasedPurchaseDecision(Recipe recipe)
         {
+            
            if(recipe.pricePerCup >= .75)
             {
                 GenerateRandomNumber();
                 if (numberChance > 40)
                 {
-
+                    return true;
                 }
                 else
                 {
-
+                    return false;
                 }
             }
            else if(recipe.pricePerCup >= .50)
@@ -175,11 +195,11 @@ namespace LemonadeStand
                 GenerateRandomNumber();
                 if (numberChance > 25)
                 {
-
+                    return true;
                 }
                 else
                 {
-
+                    return false;
                 }
             }
            else if(recipe.pricePerCup >= .25)
@@ -187,11 +207,11 @@ namespace LemonadeStand
                 GenerateRandomNumber();
                 if (numberChance > 12)
                 {
-
+                    return true;
                 }
                 else
                 {
-
+                    return false;
                 }
             }
            else if(recipe.pricePerCup < .25)
@@ -199,20 +219,27 @@ namespace LemonadeStand
                 GenerateRandomNumber();
                 if (numberChance > 5)
                 {
-
+                    return true;
                 }
                 else
                 {
-
+                    return false;
                 }
             }
+            else
+            {
+                return false;
+            }
 
-            //have to pass in day and/or player to be able to access weather and recipe?
         }
         public int GenerateRandomNumber()
         {
             numberChance = numberChances.Next(0, 51);
             return numberChance;
+        }
+        public void PayForCup(Player player)
+        {
+            player.wallet.money += player.recipe.pricePerCup;
         }
 
         
