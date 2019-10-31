@@ -10,8 +10,6 @@ namespace LemonadeStand
     {
 
         //member variables
-        public List<string> names;
-        public string name;
         public int numberChance;
         Random numberChances;
 

@@ -11,12 +11,15 @@ namespace LemonadeStand
         //member variables
         public double money;
 
+        //Add money property and use get/set to be able to keep track of profits/losses somehow?
+
 
         //constructor
         public Wallet()
         {
             money = 20;
         }
+        
 
 
         //member methods
@@ -24,10 +27,6 @@ namespace LemonadeStand
         {
             Console.WriteLine("You have " + money + " dollars in your wallet.");
             return money;
-        }
-        public void PurchaseSomething()
-        {
-
         }
     }
 }

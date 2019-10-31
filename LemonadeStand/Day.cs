@@ -8,7 +8,6 @@ namespace LemonadeStand
 {
     class Day
     {
-
         //member variables
         public Weather weather;
         public List<Customer> customers;
@@ -52,6 +51,7 @@ namespace LemonadeStand
             string menuChoice = Console.ReadLine();
             switch (menuChoice)
             {
+            //Do I want to make sure they can't move on before filling up their inventory? Probably 
                 case "inventory":
                     player.inventory.DisplayInventory();
                     UserMenu(player, store);
@@ -78,15 +78,11 @@ namespace LemonadeStand
         }
         private void GenerateCustomers(Random random)
         {
-           //pass day's weather condition and temp in 
-         
                 int randomNum = random.Next(30, 51);
                 for (int i = 1; i < randomNum; i++)
                 {
                     customers.Add(new Customer(random));
                 }
         }
-
-       
     }
 }
