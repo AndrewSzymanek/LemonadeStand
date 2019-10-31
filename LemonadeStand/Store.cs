@@ -50,12 +50,16 @@ namespace LemonadeStand
                 case "cups":
                     SellCups();
                 break;
+                default:
+                    Console.WriteLine("Please enter a choice from the list provided.");
+                    WhichItemToBuy();
+                break;
             }
 
         }
         public void SellLemons()
         {
-            Console.WriteLine("How many lemons would you like to buy?");
+            Console.WriteLine("How many lemons would you like to buy? Remember lemons cost $" + pricePerLemon + "." );
             int numLemons = Int32.Parse(Console.ReadLine());
             double totalCost = (numLemons * pricePerLemon);
             if(player.wallet.money >= totalCost)
@@ -67,7 +71,7 @@ namespace LemonadeStand
         }
         public void SellSugarCubes()
         {
-            Console.WriteLine("How many sugar cubes would you like to buy?");
+            Console.WriteLine("How many sugar cubes would you like to buy? Remember sugar cubes cost $" + pricePerSugarCube + ".");
             int numSugarCubes = Int32.Parse(Console.ReadLine());
             double totalCost = (numSugarCubes * pricePerSugarCube);
             if(player.wallet.money >= totalCost)
@@ -79,7 +83,7 @@ namespace LemonadeStand
         }
         public void SellIceCubes()
         {
-            Console.WriteLine("How many ice cubes would you like to buy?");
+            Console.WriteLine("How many ice cubes would you like to buy? Remember ice cubes cost $" + pricePerIceCube + ".");
             int numIceCubes = Int32.Parse(Console.ReadLine());
             double totalCost = (numIceCubes * pricePerIceCube);
             if(player.wallet.money >= totalCost)
@@ -91,7 +95,7 @@ namespace LemonadeStand
         }
         public void SellCups()
         {
-            Console.WriteLine("How many cups would you like to buy?");
+            Console.WriteLine("How many cups would you like to buy? Remember cups cost $" + pricePerCup + ".");
             int numCups = Int32.Parse(Console.ReadLine());
             double totalCost = (numCups * pricePerCup);
             if (player.wallet.money >= totalCost)

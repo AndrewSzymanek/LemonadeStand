@@ -40,13 +40,17 @@ namespace LemonadeStand
             {
                 inventory.numberOfLemons -= recipe.amountOfLemons;
             }
-            if (inventory.numberOfSugarCubes > recipe.amountOfSugarCubes)
+            else if (inventory.numberOfSugarCubes > recipe.amountOfSugarCubes)
             {
                 inventory.numberOfSugarCubes -= recipe.amountOfSugarCubes;
             }
-            if (inventory.numberOfLemons > recipe.amountOfIceCubes)
+            else if (inventory.numberOfIceCubes > recipe.amountOfIceCubes)
             {
                 inventory.numberOfIceCubes -= recipe.amountOfIceCubes;
+            }
+            else
+            {
+                //Console.WriteLine("Buy more inventory!");
             }
            
 

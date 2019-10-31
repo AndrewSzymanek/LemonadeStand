@@ -35,8 +35,22 @@ namespace LemonadeStand
         }
         public void SetPrice()
         {
-            Console.WriteLine("Set the price per cup of lemonade.");
-            pricePerCup = Double.Parse(Console.ReadLine());
+            Console.WriteLine("Set the price per cup of lemonade. Enter up to $1.00");
+
+                try
+                {
+                    pricePerCup = Double.Parse(Console.ReadLine());
+                }
+                catch (FormatException)
+                {
+                    Console.WriteLine("Please enter a decimal number to represent a price under 1.00 (50 cents = .50)");
+                    SetPrice();
+                }
+            
+           
+            
+            
+            
             //handle user error here
         }
     }
