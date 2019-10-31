@@ -41,11 +41,9 @@ namespace LemonadeStand
         }
         public void RunGame()
         {
+            DisplayRules();
             CreateDays(ChooseAmountOfDays());
             player.recipe.MakeRecipe();
-            player.recipe.SetPrice();
-            player.MakePitcher();
-
 
             if (player.wallet.money > 0)
             {
@@ -63,7 +61,13 @@ namespace LemonadeStand
                 return numberOfDays;
         }
       
-        
+        public void DisplayRules()
+        {
+            Console.WriteLine("Welcome to Lemonade Stand where the goal is to have as many passersby purchase your lemonade.\n First, you will choose how long you'd like to play the game.\nThen, you will decide your special recipe.");
+            Console.WriteLine("After choosing your recipe and price, you will be shown the first day's weather.\nBased off of the weather, you will choose your price of lemonade.\nIf it's sunny and hot, jack that price up! If it's cool and/or rainy, lower that price.");
+            Console.WriteLine("When the price is set, you're able to start stocking up for your inventory of items to make pitchers of lemonade and sell them to customers.\nAfter your inventory is stocked up, you should go ahead and make a pitcher.\nYou can't make a pitcher without buying some items first.");
+            Console.WriteLine("Finally, enter 'continue' to see how many passersby you have that day and watch some of them buy from you or pass you buy.");
+        }
         
 
 

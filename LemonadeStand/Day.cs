@@ -25,12 +25,16 @@ namespace LemonadeStand
         public void RunDay(Player player, Store store, Random random) 
         {
             DisplayWeather();
+            player.recipe.SetPrice();
             UserMenu(player, store);
             Console.WriteLine("You have " + customers.Count + " potential customers today.");
             foreach (Customer customer in customers)
             {
+                if(player.pitcher.cupsLeftInPitcher > 0)
+                {
+                    customer.MakePurchaseDecision(player, weather);
+                }
                 
-                customer.MakePurchaseDecision(player, weather);
             }
             //foreach customer, run decision method
 
@@ -44,7 +48,7 @@ namespace LemonadeStand
         public void UserMenu(Player player, Store store)
         {
 
-            Console.WriteLine("Would you like to check inventory, check wallet or go to the store? Type 'inventory', 'wallet', or 'store'.\nType 'make pitcher' to get ready for customers then type 'continue' to move on.");
+            Console.WriteLine("Would you like to check inventory, check wallet or go to the store? Type 'inventory', 'wallet', or 'store'.\nAfter you've stocked up your inventory, type 'make pitcher' to get ready for customers then type 'continue' to move on.");
             string menuChoice = Console.ReadLine();
             switch (menuChoice)
             {
@@ -62,6 +66,7 @@ namespace LemonadeStand
                     break;
                 case "make pitcher":
                     player.MakePitcher();
+                    UserMenu(player, store);
                     break;
                 case "continue":
                     break;
