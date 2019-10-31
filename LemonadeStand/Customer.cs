@@ -26,22 +26,24 @@ namespace LemonadeStand
 
         //buy lemonade method
 
-        public void MakePurchaseDecision()
+        public void MakePurchaseDecision(Player player)
         {
-
+            //if it returns true
+            player.pitcher.CupPoured();
+            //if it returns false
         }
-        public void WeatherBasedPurchaseDecision(Weather weather)
+        public bool WeatherBasedPurchaseDecision(Weather weather)
         {
             if(weather.condition == "rainy" && weather.temperature >= 70)
             {
                 GenerateRandomNumber();
                 if(numberChance > 25)
                 {
-
+                    return true;
                 }
                 else
                 {
-
+                    return false;
                 }
             }
             else if(weather.condition == "rainy" && weather.temperature < 70)
@@ -49,11 +51,11 @@ namespace LemonadeStand
                 GenerateRandomNumber();
                 if (numberChance < 25)
                 {
-
+                    return true;
                 }
                 else
                 {
-
+                    return false;
                 }
             }
             else if(weather.condition == "overcast" && weather.temperature >= 80)
@@ -61,11 +63,11 @@ namespace LemonadeStand
                 GenerateRandomNumber();
                 if (numberChance > 12)
                 {
-
+                    return true;
                 }
                 else
                 {
-
+                    return false;
                 }
             }
             else if(weather.condition == "overcast" && weather.temperature < 80)
@@ -73,11 +75,11 @@ namespace LemonadeStand
                 GenerateRandomNumber();
                 if (numberChance > 20)
                 {
-
+                    return true;
                 }
                 else
                 {
-
+                    return false;
                 }
             }
             else if(weather.condition == "sunny" && weather.temperature > 85)
@@ -85,11 +87,11 @@ namespace LemonadeStand
                 GenerateRandomNumber();
                 if(numberChance > 5)
                 {
-
+                    return true;
                 }
                 else
                 {
-
+                    return false;
                 }
             }
             else if(weather.condition == "sunny" && weather.temperature < 85)
@@ -97,11 +99,11 @@ namespace LemonadeStand
                 GenerateRandomNumber();
                 if(numberChance > 15)
                 {
-
+                    return true;
                 }
                 else
                 {
-
+                    return false;
                 }
             }
             else if(weather.condition == "thunderstorm" && weather.temperature >= 80)
@@ -109,11 +111,11 @@ namespace LemonadeStand
                 GenerateRandomNumber();
                 if(numberChance < 4)
                 {
-
+                    return true;
                 }
                 else
                 {
-
+                    return false;
                 }
             }
             else if(weather.condition == "thunderstorm" && weather.temperature < 80)
@@ -121,11 +123,11 @@ namespace LemonadeStand
                 GenerateRandomNumber();
                 if(numberChance < 2)
                 {
-
+                    return true;
                 }
                 else
                 {
-
+                    return false;
                 }
             }
             else if(weather.condition == "partly cloudy" && weather.temperature >= 85)
@@ -133,11 +135,11 @@ namespace LemonadeStand
                 GenerateRandomNumber();
                 if(numberChance > 6)
                 {
-
+                    return true;
                 }
                 else
                 {
-
+                    return false;
                 }
             }
             else if(weather.condition == "partly cloudy" && weather.temperature < 85)
@@ -145,11 +147,11 @@ namespace LemonadeStand
                 GenerateRandomNumber();
                 if(numberChance > 20)
                 {
-
+                    return true;
                 }
                 else
                 {
-
+                    return false;
                 }
 
             }

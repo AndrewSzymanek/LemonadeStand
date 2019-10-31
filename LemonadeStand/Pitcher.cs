@@ -25,7 +25,7 @@ namespace LemonadeStand
         
         public void CupPoured()
         {
-           
+            cupsLeftInPitcher--;
         }
     }
 }
