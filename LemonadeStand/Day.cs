@@ -33,9 +33,12 @@ namespace LemonadeStand
                 {
                     customer.MakePurchaseDecision(player, weather);
                 }
+                else if(player.pitcher.cupsLeftInPitcher = 0)
+                {
+                    player.MakePitcher();
+                }
                 
             }
-            //foreach customer, run decision method
 
         }
         public void DisplayWeather()

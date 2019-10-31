@@ -23,8 +23,9 @@ namespace LemonadeStand
         //member methods
 
         
-        public void CupPoured()
+        public void CupPoured(Player player)
         {
+            player.inventory.numberOfCups--;
             cupsLeftInPitcher--;
         }
     }
