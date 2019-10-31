@@ -35,9 +35,5 @@ namespace LemonadeStand
             Console.WriteLine("You have " + numberOfIceCubes + " ice cubes.");
             Console.WriteLine("You have " + numberOfCups + " cups.");
         }
-
-        //each time a pitcher is made, subtract each of these numbers by the numbers in the recipe
-        //likewise, each time a visit to the store is made, add to each of these numbers
-
     }
 }

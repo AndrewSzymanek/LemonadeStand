@@ -30,16 +30,18 @@ namespace LemonadeStand
         //member methods
         public void CreateDays(int numbDays)
         {
-
+            
             for (int i = 0; i < numbDays; i++)
             {
                 days.Add(new Day(random));
             }
         }
+        
         public void RunGame()
         {
             DisplayRules();
             CreateDays(ChooseAmountOfDays());
+            //Console.WriteLine("Welcome to day " + CreateDays());
             player.recipe.MakeRecipe();
 
             if (player.wallet.money > 0)

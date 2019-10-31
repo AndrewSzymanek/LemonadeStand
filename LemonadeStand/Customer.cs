@@ -41,8 +41,6 @@ namespace LemonadeStand
             {
                 Console.WriteLine("Pass...");
             }
-            
-            //if it returns false
         }
         public bool WeatherBasedPurchaseDecision(Weather weather)
         {
@@ -230,6 +228,8 @@ namespace LemonadeStand
             }
 
         }
+
+        
         public int GenerateRandomNumber()
         {
             numberChance = numberChances.Next(0, 51);
