@@ -10,15 +10,18 @@ namespace LemonadeStand
     {
         //member variables
         public double money;
-        public double earnedMoney;
-        public double moneySpentInventory;
-
+        public double earnedMoneyToday;
+        public double earnedMoneyTotal;
+        public double moneySpentInventoryToday;
+        public double moneySpentInventoryTotal;
         //constructor
         public Wallet()
         {
             money = 20;
-            earnedMoney = 0;
-            moneySpentInventory = 0;
+            earnedMoneyToday = 0;
+            earnedMoneyTotal = 0;
+            moneySpentInventoryToday = 0;
+            moneySpentInventoryTotal = 0;
         }
         
 

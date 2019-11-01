@@ -98,17 +98,19 @@ namespace LemonadeStand
         }
         private void EndOfDayDisplay(Player player)
         {
-            Console.WriteLine("You spent " + player.wallet.moneySpentInventory + " dollars on inventory today.");
-            Console.WriteLine("You made " + player.wallet.earnedMoney + " dollars today.");
-            Console.WriteLine("Today's profit/loss is: " + (player.wallet.earnedMoney - player.wallet.moneySpentInventory));
-            player.wallet.moneySpentInventory = 0;
+            Console.WriteLine("You spent " + player.wallet.moneySpentInventoryToday + " dollars on inventory today.");
+            Console.WriteLine("You made " + player.wallet.earnedMoneyToday + " dollars today.");
+            Console.WriteLine("Today's profit/loss is: " + (player.wallet.earnedMoneyToday - player.wallet.moneySpentInventoryToday));
+            Console.WriteLine("You have spent " + player.wallet.moneySpentInventoryTotal + " dollars on inventory thus far.");
+            Console.WriteLine("Total profit/loss is: " + player.wallet.earnedMoneyTotal + ".");
+            player.wallet.moneySpentInventoryToday = 0;
             NewMoneyInPot(player);
         }
 
         private void NewMoneyInPot(Player player)
         {
-            player.wallet.money += player.wallet.earnedMoney;
-            player.wallet.earnedMoney = 0;
+            player.wallet.money += player.wallet.earnedMoneyToday;
+            player.wallet.earnedMoneyToday = 0;
         }
     }
 }
