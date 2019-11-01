@@ -10,24 +10,15 @@ namespace LemonadeStand
     {
         //member variables
         public double money;
-        //public double Money
-        //{
-        //    get
-        //    {
-        //        return money;
-        //    }
-        //    set
-        //    {
-
-        //    }
-        //}
-        //Add money property and use get/set to be able to keep track of profits/losses somehow?
-
+        public double earnedMoney;
+        public double moneySpentInventory;
 
         //constructor
         public Wallet()
         {
             money = 20;
+            earnedMoney = 0;
+            moneySpentInventory = 0;
         }
         
 

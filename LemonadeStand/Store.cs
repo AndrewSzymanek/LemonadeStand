@@ -66,7 +66,9 @@ namespace LemonadeStand
             {
                 player.wallet.money -= totalCost;
                 player.inventory.numberOfLemons += numLemons;
+                player.wallet.moneySpentInventory += totalCost;
             }
+            
            
         }
         public void SellSugarCubes()
@@ -78,6 +80,7 @@ namespace LemonadeStand
             {
                 player.wallet.money -= totalCost;
                 player.inventory.numberOfSugarCubes += numSugarCubes;
+                player.wallet.moneySpentInventory += totalCost;
             }
             
         }
@@ -90,6 +93,7 @@ namespace LemonadeStand
             {
                 player.wallet.money -= totalCost;
                 player.inventory.numberOfIceCubes += numIceCubes;
+                player.wallet.moneySpentInventory += totalCost;
             }
             
         }
@@ -102,6 +106,7 @@ namespace LemonadeStand
             {
                 player.wallet.money -= totalCost;
                 player.inventory.numberOfCups += numCups;
+                player.wallet.moneySpentInventory += totalCost;
             }
             
         }

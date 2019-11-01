@@ -34,11 +34,10 @@ namespace LemonadeStand
             Console.WriteLine("Please enter your name.");
             name = Console.ReadLine();
         }
-        public bool CheckInventory()
+        public bool CheckInventoryForPitcher()
         {
             if (inventory.numberOfLemons >= recipe.amountOfLemons && inventory.numberOfSugarCubes >= recipe.amountOfSugarCubes && inventory.numberOfIceCubes >= recipe.amountOfIceCubes)
             {
-
                 return true;
             }
             else

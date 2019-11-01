@@ -29,6 +29,8 @@ namespace LemonadeStand
 
 
         //member methods
+        //SOLID PRINCIPLE- open/closed principle- the GenerateWeatherCondition method is closed to modification because it's doing one thing generating the random weather.
+        //However, if we wanted to add conditions to the list to be able to choose from a broader list of options, we could. (say there could be a hurricane or an earthquake depending on the location of the game)
         public void GenerateWeatherCondition(Random random)
         {
             int randomWeather = random.Next(0, weatherConditions.Count);

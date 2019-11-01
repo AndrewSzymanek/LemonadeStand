@@ -23,7 +23,7 @@ namespace LemonadeStand
         //member methods
         public void RunDay(Player player, Store store, Random random) 
         {
-            Console.WriteLine("Welcome to day " );
+            Console.WriteLine("Welcome to a new day!" );
             DisplayWeather();
             player.recipe.SetPrice();
             UserMenu(player, store);
@@ -36,7 +36,7 @@ namespace LemonadeStand
                 }
                 else if(player.pitcher.cupsLeftInPitcher == 0)
                 {
-                    if(player.CheckInventory() == true)
+                    if(player.CheckInventoryForPitcher() == true)
                     {
                         player.MakePitcher();
                     }
@@ -46,6 +46,9 @@ namespace LemonadeStand
                     }  
                 }              
             }
+            EndOfDayDisplay(player);
+            
+           
         }
         public void DisplayWeather()
         {
@@ -92,6 +95,20 @@ namespace LemonadeStand
                 {
                     customers.Add(new Customer(random));
                 }
+        }
+        private void EndOfDayDisplay(Player player)
+        {
+            Console.WriteLine("You spent " + player.wallet.moneySpentInventory + " dollars on inventory today.");
+            Console.WriteLine("You made " + player.wallet.earnedMoney + " dollars today.");
+            Console.WriteLine("Today's profit/loss is: " + (player.wallet.earnedMoney - player.wallet.moneySpentInventory));
+            player.wallet.moneySpentInventory = 0;
+            NewMoneyInPot(player);
+        }
+
+        private void NewMoneyInPot(Player player)
+        {
+            player.wallet.money += player.wallet.earnedMoney;
+            player.wallet.earnedMoney = 0;
         }
     }
 }
