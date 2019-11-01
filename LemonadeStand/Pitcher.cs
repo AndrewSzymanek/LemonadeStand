@@ -19,14 +19,19 @@ namespace LemonadeStand
             cupsLeftInPitcher = 20;
         }
 
-
         //member methods
 
-        
         public void CupPoured(Player player)
         {
-            player.inventory.numberOfCups--;
-            cupsLeftInPitcher--;
+            if (player.inventory.numberOfCups > 0)
+            {
+                player.inventory.numberOfCups--;
+                cupsLeftInPitcher--;
+            }
+            else if(player.inventory.numberOfCups == 0)
+            {
+                Console.WriteLine("You're out of cups!");
+            }
         }
     }
 }

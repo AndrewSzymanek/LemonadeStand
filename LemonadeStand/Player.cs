@@ -34,24 +34,29 @@ namespace LemonadeStand
             Console.WriteLine("Please enter your name.");
             name = Console.ReadLine();
         }
-        public void MakePitcher()
+        public bool CheckInventory()
         {
             if (inventory.numberOfLemons >= recipe.amountOfLemons && inventory.numberOfSugarCubes >= recipe.amountOfSugarCubes && inventory.numberOfIceCubes >= recipe.amountOfIceCubes)
+            {
+
+                return true;
+            }
+            else
+            {
+                Console.WriteLine("Out of inventory!");
+                return false;
+            }
+        }
+           public void MakePitcher()
             {
                 inventory.numberOfLemons -= recipe.amountOfLemons;
                 inventory.numberOfSugarCubes -= recipe.amountOfSugarCubes;
                 inventory.numberOfIceCubes -= recipe.amountOfIceCubes;
                 pitcher.cupsLeftInPitcher += 20;
-            }                 
-            else
-            {
-                Console.WriteLine("Out of inventory!");
             }
-            
-           
            
 
-        }
+        
       
 
     }

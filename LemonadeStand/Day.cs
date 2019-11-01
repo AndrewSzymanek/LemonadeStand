@@ -36,12 +36,16 @@ namespace LemonadeStand
                 }
                 else if(player.pitcher.cupsLeftInPitcher == 0)
                 {
-
-                    player.MakePitcher();
-                }
-                
+                    if(player.CheckInventory() == true)
+                    {
+                        player.MakePitcher();
+                    }
+                    else
+                    {
+                        break;
+                    }  
+                }              
             }
-
         }
         public void DisplayWeather()
         {
