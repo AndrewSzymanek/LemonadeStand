@@ -41,7 +41,7 @@ namespace LemonadeStand
         {
             DisplayRules();
             CreateDays(ChooseAmountOfDays());
-            //Console.WriteLine("Welcome to day " + CreateDays());
+            
             player.recipe.MakeRecipe();
 
             if (player.wallet.money > 0)
@@ -49,6 +49,7 @@ namespace LemonadeStand
                 for (int i = 0; i < days.Count; i++)
                 {
                     days[i].RunDay(player, store, random);
+                    
                 }
             }
         }

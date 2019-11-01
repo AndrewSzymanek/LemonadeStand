@@ -36,23 +36,18 @@ namespace LemonadeStand
         }
         public void MakePitcher()
         {
-            if (inventory.numberOfLemons >= recipe.amountOfLemons)
+            if (inventory.numberOfLemons >= recipe.amountOfLemons && inventory.numberOfSugarCubes >= recipe.amountOfSugarCubes && inventory.numberOfIceCubes >= recipe.amountOfIceCubes)
             {
                 inventory.numberOfLemons -= recipe.amountOfLemons;
-            }
-            if (inventory.numberOfSugarCubes >= recipe.amountOfSugarCubes)
-            {
                 inventory.numberOfSugarCubes -= recipe.amountOfSugarCubes;
-            }
-            if (inventory.numberOfIceCubes >= recipe.amountOfIceCubes)
-            {
                 inventory.numberOfIceCubes -= recipe.amountOfIceCubes;
-            }
+                pitcher.cupsLeftInPitcher += 20;
+            }                 
             else
             {
-                //return to start the next day
+                Console.WriteLine("Out of inventory!");
             }
-            pitcher.cupsLeftInPitcher += 20;
+            
            
            
 

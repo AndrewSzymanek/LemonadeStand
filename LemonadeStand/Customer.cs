@@ -32,6 +32,7 @@ namespace LemonadeStand
             //if it returns true
             if(weatherAnswer == true && priceAnswer == true)
             {
+                if()
                 player.pitcher.CupPoured(player);
                 PayForCup(player);
                 Console.WriteLine("Purchase!");

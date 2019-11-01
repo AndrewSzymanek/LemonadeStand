@@ -23,6 +23,7 @@ namespace LemonadeStand
         //member methods
         public void RunDay(Player player, Store store, Random random) 
         {
+            Console.WriteLine("Welcome to day " );
             DisplayWeather();
             player.recipe.SetPrice();
             UserMenu(player, store);
@@ -35,6 +36,7 @@ namespace LemonadeStand
                 }
                 else if(player.pitcher.cupsLeftInPitcher == 0)
                 {
+
                     player.MakePitcher();
                 }
                 
