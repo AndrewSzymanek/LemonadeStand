@@ -238,7 +238,8 @@ namespace LemonadeStand
         }
         public void PayForCup(Player player)
         {
-            player.wallet.earnedMoney += player.recipe.pricePerCup;
+            player.wallet.earnedMoneyToday += player.recipe.pricePerCup;
+            player.wallet.earnedMoneyTotal += player.recipe.pricePerCup;
         }
 
         
