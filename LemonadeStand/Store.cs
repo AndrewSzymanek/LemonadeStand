@@ -60,57 +60,90 @@ namespace LemonadeStand
         public void SellLemons()
         {
             Console.WriteLine("How many lemons would you like to buy? Remember lemons cost $" + pricePerLemon + "." );
-            int numLemons = Int32.Parse(Console.ReadLine());
-            double totalCost = (numLemons * pricePerLemon);
-            if(player.wallet.money >= totalCost)
+            try
             {
-                player.wallet.money -= totalCost;
-                player.inventory.numberOfLemons += numLemons;
-                player.wallet.moneySpentInventoryToday += totalCost;
-                player.wallet.moneySpentInventoryTotal += totalCost;
+                int numLemons = Int32.Parse(Console.ReadLine());
+                double totalCost = (numLemons * pricePerLemon);
+                if (player.wallet.money >= totalCost)
+                {
+                    player.wallet.money -= totalCost;
+                    player.inventory.numberOfLemons += numLemons;
+                    player.wallet.moneySpentInventoryToday += totalCost;
+                    player.wallet.moneySpentInventoryTotal += totalCost;
+                }
             }
+            catch (FormatException)
+            {
+                Console.WriteLine("Please select a number.");
+            }
+            
+         
             
            
         }
         public void SellSugarCubes()
         {
             Console.WriteLine("How many sugar cubes would you like to buy? Remember sugar cubes cost $" + pricePerSugarCube + ".");
-            int numSugarCubes = Int32.Parse(Console.ReadLine());
-            double totalCost = (numSugarCubes * pricePerSugarCube);
-            if(player.wallet.money >= totalCost)
+            try
             {
-                player.wallet.money -= totalCost;
-                player.inventory.numberOfSugarCubes += numSugarCubes;
-                player.wallet.moneySpentInventoryToday += totalCost;
-                player.wallet.moneySpentInventoryTotal += totalCost;
+                int numSugarCubes = Int32.Parse(Console.ReadLine());
+                double totalCost = (numSugarCubes * pricePerSugarCube);
+                if (player.wallet.money >= totalCost)
+                {
+                    player.wallet.money -= totalCost;
+                    player.inventory.numberOfSugarCubes += numSugarCubes;
+                    player.wallet.moneySpentInventoryToday += totalCost;
+                    player.wallet.moneySpentInventoryTotal += totalCost;
+                }
             }
+            catch(FormatException)
+            {
+                Console.WriteLine("Please select a number.");
+            }
+            
+          
             
         }
         public void SellIceCubes()
         {
             Console.WriteLine("How many ice cubes would you like to buy? Remember ice cubes cost $" + pricePerIceCube + ".");
-            int numIceCubes = Int32.Parse(Console.ReadLine());
-            double totalCost = (numIceCubes * pricePerIceCube);
-            if(player.wallet.money >= totalCost)
+            try
             {
-                player.wallet.money -= totalCost;
-                player.inventory.numberOfIceCubes += numIceCubes;
-                player.wallet.moneySpentInventoryToday += totalCost;
-                player.wallet.moneySpentInventoryTotal += totalCost;
+                int numIceCubes = Int32.Parse(Console.ReadLine());
+                double totalCost = (numIceCubes * pricePerIceCube);
+                if (player.wallet.money >= totalCost)
+                {
+                    player.wallet.money -= totalCost;
+                    player.inventory.numberOfIceCubes += numIceCubes;
+                    player.wallet.moneySpentInventoryToday += totalCost;
+                    player.wallet.moneySpentInventoryTotal += totalCost;
+                }
             }
+            catch (FormatException)
+            {
+                Console.WriteLine("Please select a number.");
+            }
+            
             
         }
         public void SellCups()
         {
             Console.WriteLine("How many cups would you like to buy? Remember cups cost $" + pricePerCup + ".");
-            int numCups = Int32.Parse(Console.ReadLine());
-            double totalCost = (numCups * pricePerCup);
-            if (player.wallet.money >= totalCost)
+            try
             {
-                player.wallet.money -= totalCost;
-                player.inventory.numberOfCups += numCups;
-                player.wallet.moneySpentInventoryToday += totalCost;
-                player.wallet.moneySpentInventoryTotal += totalCost;
+                int numCups = Int32.Parse(Console.ReadLine());
+                double totalCost = (numCups * pricePerCup);
+                if (player.wallet.money >= totalCost)
+                {
+                    player.wallet.money -= totalCost;
+                    player.inventory.numberOfCups += numCups;
+                    player.wallet.moneySpentInventoryToday += totalCost;
+                    player.wallet.moneySpentInventoryTotal += totalCost;
+                }
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine("Please select a number.");
             }
             
         }
